@@ -4,7 +4,7 @@
   "description": "THIS IS A BCIT LAB ASSIGNMENT",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev --respawn interface.ts"
+    "start": "ts-node-dev --respawn src/index.ts"
   },
   "repository": {
     "type": "git",
