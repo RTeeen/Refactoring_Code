@@ -1,5 +1,5 @@
 import { Node } from "./node"
-import { ISortable } from './interface'
+import { ISortable } from './ISortable'
 
 export class LinkedListGroup implements ISortable {
     head: Node | null = null;

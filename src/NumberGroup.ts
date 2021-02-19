@@ -1,21 +1,18 @@
-import { ISortable } from './ISortable';
+import { ISortable } from './ISortable'
 
 export class NumberGroup implements ISortable {
-  constructor(data: number[]) {
-    this.data = data;
-  }
-
-  data: number[];
-
-  get length(): number {
-    // logic here
-  };
-
-  compare(leftPos: number, rightPos: number): boolean {
-    // logic here
-  }
-
-  swap(left: number, right: number): void {
-    // logic here
-  }
+    data: number[];
+    get length(): number { return this.data.length }
+    swap(leftPos: number, rightPos:number): void { 
+            let tempLeft = this.data[leftPos];
+            this.data[leftPos] = this.data[rightPos];
+            this.data[rightPos] = tempLeft;
+    }
+    compare(leftPos: number, rightPos:number): boolean {
+        if (this.data[leftPos] > this.data[rightPos]) return true;
+        else return false;
+    }
+    constructor(data: number[]) {
+        this.data = data;
+    }
 }
